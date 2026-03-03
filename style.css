@@ -23,7 +23,12 @@ html, body {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-h); /* important with fixed header */
+  max-width: 100%; 
+  overflow-x: hidden;
 }
+
+img, video { max-width: 100%; height: auto; display: block; }
+
 
 body {
   margin: 0;
@@ -421,3 +426,49 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
     opacity: 1;
   }
 }
+/* --- Mobile-first adjustments --- */
+@media (max-width: 900px) {
+  /* HERO: turn the two-column hero into one column */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* 3-up project grid becomes 2-up */
+  .grid3 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* 2-up becomes 1-up */
+  .grid3 {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Give sections a bit more breathing room */
+  .section { padding: 48px 0; }
+  .container { padding-left: 16px; padding-right: 16px; }
+
+  /* Make buttons easier to tap */
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 14px 16px;
+  }
+
+  /* Pills wrap nicely */
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; }
+.hero-lead { font-size: clamp(1rem, 2.4vw, 1.2rem); }
+.section-title { font-size: clamp(1.4rem, 3.5vw, 2rem); }
