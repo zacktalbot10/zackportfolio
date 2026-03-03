@@ -390,16 +390,13 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 .cinematic-stage{
   will-change: transform, opacity;
   transform-origin: center center;
+  filter: saturate(1.02);
 }
 
 .cinematic-inner{
   transform: translateZ(0); /* helps crispness on some browsers */
 }
 
-/* Optional: very subtle depth */
-.cinematic-stage{
-  filter: saturate(1.02);
-}
 .about-intro {
   max-width: 70ch;
   margin: 0 0 3rem 0;
@@ -427,7 +424,8 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
     opacity: 1;
   }
 }
-/* --- Mobile-first adjustments --- */
+
+/* --- Mobile adjustments --- */
 @media (max-width: 900px) {
   /* HERO: turn the two-column hero into one column */
   .hero-grid {
@@ -480,3 +478,21 @@ h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; }
 
 a, button { -webkit-tap-highlight-color: transparent; }
 .button, .tile { border-radius: 16px; } /* keep your aesthetic */
+
+/* Disable snap on mobile */
+@media (max-width: 768px) {
+  html, body {
+    scroll-snap-type: none !important;
+  }
+
+  /* If your snap is on a wrapper, target that too */
+  .snap-container {
+    scroll-snap-type: none !important;
+  }
+
+  /* Sections no longer “snap align” */
+  .snap-section {
+    scroll-snap-align: none !important;
+    scroll-snap-stop: normal !important;
+  }
+}
