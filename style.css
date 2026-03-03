@@ -259,7 +259,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   align-items: center;
 }
 .snap-section {
-  min-height: 100vh;
+  min-height: 100svh;
   scroll-snap-align: start;
   scroll-snap-stop: always; 
   position: relative;
@@ -304,6 +304,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
+  height: auto;
 }
 .tile.link { transition: transform 160ms ease, background 160ms ease; text-decoration: none !important; }
 .tile.link:hover { transform: translateY(-2px); background: var(--panel-strong); }
@@ -472,3 +473,10 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; }
 .hero-lead { font-size: clamp(1rem, 2.4vw, 1.2rem); }
 .section-title { font-size: clamp(1.4rem, 3.5vw, 2rem); }
+
+@media (hover: none) {
+  .tile:hover { transform: none; }
+}
+
+a, button { -webkit-tap-highlight-color: transparent; }
+.button, .tile { border-radius: 16px; } /* keep your aesthetic */
