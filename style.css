@@ -114,6 +114,14 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 .hero { 
   padding: 0 0 2.2rem;
   min-height: calc(100vh - 72px); 
+  background: linear-gradient(270deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 /* Hero fade into next section */
 #hero{
