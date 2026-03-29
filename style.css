@@ -402,10 +402,6 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   transform-origin: center center;
   filter: saturate(1.02);
 }
-
-.cinematic-inner{
-  transform: translateZ(0); /* helps crispness on some browsers */
-}
 .about-intro {
   max-width: 70ch;
   margin: 0 0 3rem 0;
