@@ -343,8 +343,8 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   font-weight: 750;
 }
 .contact-link:hover { color: var(--text); background: rgba(55, 55, 55, 0.95); text-decoration: none; }
-#contact { /* Contact page hosts footer inside the same snap "page" */
-  min-height: 100vh;            
+#contact {
+  min-height: 100svh;            
   display: flex;
   flex-direction: column;
    position: relative;
@@ -353,13 +353,10 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 #contact > .container { /* Main contact content takes remaining space */
   flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+  align-items: center;
   padding-top: 5rem;
-  padding-bottom: 0;
 }
-#contact .site-footer--inpage { /* Footer stays visible at bottom of contact page */
+.site-footer--inpage {
   margin-top: auto;
 }
 
