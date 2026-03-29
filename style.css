@@ -353,7 +353,9 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 #contact > .container { /* Main contact content takes remaining space */
   flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: unset;        /* overrides section-center's min-height: 100vh */
   padding-top: 5rem;
 }
 .site-footer--inpage {
