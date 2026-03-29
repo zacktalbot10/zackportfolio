@@ -10,8 +10,8 @@
   --radius-sm: 12px;
   --container: 1120px;
   --gap: 18px;
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
-    "Apple Color Emoji", "Segoe UI Emoji";
+  --font: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --header-h: 72px;
 }
 
@@ -23,7 +23,7 @@ html, body {
   height: 100%;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-h); /* important with fixed header */
+  scroll-padding-top: var(--header-h); 
   max-width: 100%; 
   overflow-x: hidden;
 }
@@ -33,7 +33,10 @@ img, video { max-width: 100%; height: auto; display: block; }
 
 body {
   margin: 0;
-  font-family: var(--font);
+  font-family: var(--font-body);
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
   color: var(--text);  
   line-height: 1.5;
   background: linear-gradient(270deg, #202020, #303030, #3f3f3f);
@@ -46,6 +49,13 @@ body {
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+h1, h2, h3 {
+  font-family: var(--font);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
@@ -171,11 +181,6 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   font-size: 0.82rem; 
   margin: 0 0 0.75rem; 
 }
-.hero h1 { 
-  margin: 0 0 0.9rem; 
-  font-size: clamp(2.1rem, 3.6vw, 3.1rem); 
-  line-height: 1.1; 
-}
 .accent { 
   background: linear-gradient(135deg, rgba(108, 99, 255, 1), rgba(0, 209, 255, 1)); 
   -webkit-background-clip: text; 
@@ -198,10 +203,6 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   gap: 0.6rem; 
   flex-wrap: wrap; 
   margin-bottom: 1rem; 
-}
-#about{
-  margin-top: -28px;
-  padding-top: calc(3rem + 28px);
 }
 .pill {
   border: 1px solid var(--border);
@@ -260,13 +261,11 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .section-head { margin-bottom: 1.4rem; }
-.section-head h2 { margin: 0 0 0.4rem; font-size: 1.7rem; }
 .section-head p { margin: 0; color: var(--muted); max-width: 70ch; }
 .section-center {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: var(--header-h);
 }
 .snap-section {
   min-height: 100svh;
@@ -323,7 +322,6 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   border-bottom: 1px solid var(--border);
 }
 .tile-body { padding: 1rem 1.1rem; }
-.tile-body h3 { margin: 0 0 0.2rem; }
 .micro { margin: 0.7rem 0 0; color: var(--muted); font-weight: 650; font-size: 0.92rem; }
 
 .about-grid { 
@@ -482,7 +480,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   }
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; }
+h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1.05; }
 .hero-lead { font-size: clamp(1rem, 2.4vw, 1.2rem); }
 .section-title { font-size: clamp(1.4rem, 3.5vw, 2rem); }
 
