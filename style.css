@@ -114,7 +114,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 .hero { 
   padding: 0 0 2.2rem;
   min-height: calc(100vh - 72px); 
-  background: linear-gradient(270deg, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(270deg, #383838, #646464, #999999);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
 }
@@ -273,7 +273,16 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   position: relative;
   z-index: 0;
 }
-
+.projects{
+  background: linear-gradient(270deg, #383838, #646464, #999999);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+.contact{
+  background: linear-gradient(270deg, #383838, #646464, #999999);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap); }
 @media (max-width: 920px) { .grid3 { grid-template-columns: 1fr; } }
 
@@ -404,12 +413,20 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 .cinematic-inner{
   transform: translateZ(0); /* helps crispness on some browsers */
 }
-
+.about{
+  background: linear-gradient(270deg, #383838, #646464, #999999);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
 .about-intro {
   max-width: 70ch;
   margin: 0 0 3rem 0;
 }
-
+.skills{
+  background: linear-gradient(270deg, #383838, #646464, #999999);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
 .reveal {
   opacity: 0;
   transform: translateY(14px);
