@@ -63,20 +63,15 @@ function clamp(v, min, max) {
 function updateCinematic() {
   ticking = false;
   const vh = window.innerHeight;
-
   stages.forEach((el) => {
     const rect = el.getBoundingClientRect();
     const elCenter = rect.top + rect.height / 2;
-
-    const dist = (elCenter - vh / 2) / (vh * 1.4);
+    const dist = (elCenter - vh / 2) / (vh * 1.2);
     const p = clamp(dist, -1, 1);
     const amt = Math.abs(p);
-
-    // Stronger but still smooth
-    const scale = 0.94 + (1 - amt) * 0.06;   // 0.94 → 1 → 0.94
-    const opacity = 0.7 + (1 - amt) * 0.3;   // 0.7 → 1 → 0.7
-    const translateY = p * -35;              // deeper motion
-
+    const scale = 0.97 + (1 - amt) * 0.03; 
+    const opacity = 0.85 + (1 - amt) * 0.15;
+    const translateY = p * -15; 
     el.style.transform = `translateY(${translateY}px) scale(${scale})`;
     el.style.opacity = opacity;
   });
