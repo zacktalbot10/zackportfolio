@@ -345,20 +345,27 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
 
 /* Buttons */
 .button {
-  display: inline-flex; align-items: center; justify-content: center;
-  padding: 0.8rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: linear-gradient(135deg, rgba(108, 99, 255, 0.95), rgba(0, 209, 255, 0.85));
-  color: #ffffff;
-  font-weight: 900;
-  text-decoration: none !important;
-  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 980px;
+  border: none;
+  background: #2997ff;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  transition: all 200ms ease;
 }
-.button:hover { filter: brightness(1.05); box-shadow: var(--shadow); }
-.button.secondary { background: rgba(255,255,255,0.06); color: var(--text); }
-.button.small { padding: 0.6rem 0.85rem; font-size: 0.92rem; }
-
+.button:hover {
+  background: #0077ed;
+  transform: scale(1.02);
+}
+.button.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #2997ff;
+}
+.button.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
 /* Footer */
 .site-footer {
   padding: 2rem 0;
