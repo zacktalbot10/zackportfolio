@@ -199,10 +199,6 @@ a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-under
   flex-wrap: wrap; 
   margin-bottom: 1rem; 
 }
-#about{
-  margin-top: -28px;
-  padding-top: calc(3rem + 28px);
-}
 .pill {
   border: 1px solid var(--border);
   background: rgba(255,255,255,0.06);
