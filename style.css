@@ -238,9 +238,6 @@ p, .hero-lead, .about-intro p {
   font-size: 1rem;
   max-width: 55ch;
 }
-.section + .section {
-  margin-top: 6rem; 
-}
 .section h2 {
   margin-bottom: 0.4em;
 }
