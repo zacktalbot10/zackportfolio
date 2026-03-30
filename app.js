@@ -30,31 +30,29 @@
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
   // ========================================
-  // CINEMATIC SCROLL - Section fade-in
+  // CINEMATIC SCROLL - Full section fade-in
   // ========================================
   
-  // Target all cinematic stages
   const stages = document.querySelectorAll('.cinematic-stage');
   
-  // Add fade-in class to all stages
+  // Add fade-in class
   stages.forEach(stage => {
     stage.classList.add('fade-in');
   });
-  // Intersection Observer for fade-in
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  // Observer triggers when section enters viewport
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
       }
     });
-  }, observerOptions);
+  }, {
+    threshold: 0.2,
+    rootMargin: '0px 0px -80px 0px'
+  });
   stages.forEach(stage => fadeObserver.observe(stage));
   // ========================================
-  // PARALLAX DEPTH (subtle)
+  // SUBTLE PARALLAX
   // ========================================
   
   let ticking = false;
@@ -66,11 +64,10 @@
       const rect = stage.getBoundingClientRect();
       const centerOffset = (rect.top + rect.height / 2 - vh / 2) / vh;
       
-      // Subtle parallax - just a small Y shift based on scroll position
-      const translateY = centerOffset * -20;
-      const scale = 1 - Math.abs(centerOffset) * 0.02;
+      // Very subtle movement
+      const translateY = centerOffset * -15;
       
-      stage.style.transform = `translateY(${translateY}px) scale(${Math.max(scale, 0.98)})`;
+      stage.style.transform = `translateY(${translateY}px)`;
     });
     
     ticking = false;
@@ -81,6 +78,5 @@
       ticking = true;
     }
   }, { passive: true });
-  // Initial call
   updateParallax();
 })();
