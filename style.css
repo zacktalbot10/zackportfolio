@@ -250,6 +250,7 @@ p, .hero-lead, .about-intro p {
 .list li + li {
   margin-top: 0.3em;
 }
+
 /* ========================================
    CINEMATIC SCROLL ANIMATION
 ======================================== */
@@ -597,6 +598,10 @@ p, .hero-lead, .about-intro p {
   border-color: var(--border-strong);
   color: var(--text-primary);
   text-decoration: none;
+}
+#contact.section {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 /* ========================================
    BUTTONS
