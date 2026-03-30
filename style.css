@@ -631,7 +631,7 @@ p, .hero-lead, .about-intro p {
    FOOTER
 ======================================== */
 .site-footer {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   border-top: 1px solid var(--border);
   background: var(--bg-secondary);
 }
@@ -643,24 +643,31 @@ p, .hero-lead, .about-intro p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
+  width: min(var(--container), 100% - 2.5rem);
+  margin: 0 auto;
 }
+/* Text */
 .footer-inner p {
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.9rem;
+  margin: 0;
 }
+/* Links */
 .footer-links {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 2rem;
 }
 .footer-links a {
   color: var(--text-secondary);
-  font-size: 0.82rem;
   font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 150ms ease;
 }
 .footer-links a:hover {
-  color: var(--text-primary);
+  color: var(--accent);
   text-decoration: none;
 }
 /* ========================================
@@ -748,5 +755,16 @@ p, .hero-lead, .about-intro p {
      align-items: center;
     text-align: center;
    }
+  }
+  @media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .footer-links {
+    gap: 1.25rem;
+  }
   }
 }
