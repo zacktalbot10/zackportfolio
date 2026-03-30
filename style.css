@@ -734,11 +734,6 @@ p, .hero-lead, .about-intro p {
     padding: 0.9rem;
   }
   @media (max-width: 600px) {
-    .card-body {
-     grid-template-columns: repeat(2, 1fr);
-     gap: 0.6rem;
-     padding: 0.9rem 1.1rem;
-    }
     .stat {
      display: flex;
      flex-direction: column;
@@ -755,8 +750,6 @@ p, .hero-lead, .about-intro p {
      align-items: center;
     text-align: center;
    }
-  }
-  @media (max-width: 600px) {
   .footer-inner {
     flex-direction: column;
     align-items: center;
