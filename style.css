@@ -340,7 +340,7 @@ p, .hero-lead, .about-intro p {
     gap: 2.5rem;
   }
   
-  .hero-visual { order: -1; }
+  .hero-visual { order: 1; }
 }
 /* ========================================
    CARD (Hero)
