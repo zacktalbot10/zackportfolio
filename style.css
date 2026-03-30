@@ -632,33 +632,32 @@ p, .hero-lead, .about-intro p {
    FOOTER
 ======================================== */
 .site-footer {
-  padding: 2rem 0;
-  border-top: 1px solid var(--border);
+  width: 100%;
   background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.02) inset;
+  padding: 2.5rem 0;
+  margin-top: 4rem; /* optional breathing space from content */
 }
 .site-footer--inpage {
-  margin-top: auto;
   flex-shrink: 0;
 }
 .footer-inner {
+  width: min(var(--container), 100% - 2.5rem);
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  width: min(var(--container), 100% - 2.5rem);
-  margin: 0 auto;
 }
-/* Text */
 .footer-inner p {
   color: var(--text-muted);
   font-size: 0.9rem;
   margin: 0;
 }
-/* Links */
 .footer-links {
   display: flex;
-  align-items: center;
   gap: 2rem;
 }
 .footer-links a {
@@ -671,6 +670,7 @@ p, .hero-lead, .about-intro p {
   color: var(--accent);
   text-decoration: none;
 }
+
 /* ========================================
    MOBILE
 ======================================== */
@@ -737,8 +737,8 @@ p, .hero-lead, .about-intro p {
   .footer-inner {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
     text-align: center;
+    gap: 1rem;
   }
   .footer-links {
     gap: 1.25rem;
