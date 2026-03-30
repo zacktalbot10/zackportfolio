@@ -60,18 +60,26 @@ a:hover {
   text-decoration-thickness: 1px; 
   text-underline-offset: 3px; 
 }
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
-  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 0.6em;
   color: var(--text-primary);
 }
 h1 { font-size: clamp(2.75rem, 5vw, 3.5rem); }
 h2 { font-size: clamp(1.8rem, 3.2vw, 2.2rem); margin-bottom: 0.5rem; }
 h3 { font-size: 1.25rem; font-weight: 600; }
-p { margin: 0; }
+p, li { font-size: 1rem; font-weight: 400;}
+p, ul { 
+  line-height: 1.75;
+  margin-bottom: 1.25em;
+  color: var(--text-secondary);
+}
+p, .hero-lead, .about-intro p {
+  max-width: 65ch;
+}
 .container { 
   width: min(var(--container), calc(100% - 2.5rem)); 
   margin: 0 auto; 
@@ -230,6 +238,18 @@ p { margin: 0; }
   font-size: 1rem;
   max-width: 55ch;
 }
+.section + .section {
+  margin-top: 6rem; 
+}
+.section h2 {
+  margin-bottom: 0.4em;
+}
+.section p + p {
+  margin-top: 0.75em;
+}
+.list li + li {
+  margin-top: 0.3em;
+}
 /* ========================================
    CINEMATIC SCROLL ANIMATION
 ======================================== */
@@ -286,9 +306,11 @@ p { margin: 0; }
 }
 .hero-lead {
   color: var(--text-secondary);
-  font-size: clamp(1rem, 1.4vw, 1.1rem);
-  max-width: 50ch;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--text-secondary);
+  
 }
 .hero-actions {
   display: flex;
@@ -432,7 +454,8 @@ p { margin: 0; }
   margin-bottom: 0.6rem;
 }
 .muted {
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  font-weight: 400;
 }
 .list {
   margin: 1rem 0 0;
@@ -513,14 +536,6 @@ p { margin: 0; }
   line-height: 1.6;
   flex: 1;
 }
-.micro {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  font-weight: 500;
-}
 /* ========================================
    CONTACT
 ======================================== */
@@ -594,10 +609,6 @@ p { margin: 0; }
 .button.secondary:hover {
   background: var(--bg-tertiary);
 }
-.button.small {
-  padding: 0.5rem 0.9rem;
-  font-size: 0.82rem;
-}
 /* ========================================
    FOOTER
 ======================================== */
@@ -640,7 +651,8 @@ p { margin: 0; }
 @media (max-width: 600px) {
   .section {
     min-height: auto;
-    padding: 5rem 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
   
   .section.hero {
@@ -648,8 +660,8 @@ p { margin: 0; }
   }
   
   .container {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    max-width: var(--container);
+    margin-inline: auto;
   }
   
   .button {
