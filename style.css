@@ -68,9 +68,9 @@ h1, h2, h3, h4 {
   margin: 0;
   color: var(--text-primary);
 }
-h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); }
-h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); margin-bottom: 0.5rem; }
-h3 { font-size: 1.1rem; font-weight: 600; }
+h1 { font-size: clamp(2.75rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.8rem, 3.2vw, 2.2rem); margin-bottom: 0.5rem; }
+h3 { font-size: 1.25rem; font-weight: 600; }
 p { margin: 0; }
 .container { 
   width: min(var(--container), calc(100% - 2.5rem)); 
