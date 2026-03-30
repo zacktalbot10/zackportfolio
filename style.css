@@ -730,11 +730,19 @@ p, .hero-lead, .about-intro p {
   }
   .card-body {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     padding: 0.9rem;
   }
-  
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .footer-links {
+    gap: 1.25rem;
+  }
   @media (max-width: 600px) {
     .stat {
      display: flex;
@@ -752,14 +760,6 @@ p, .hero-lead, .about-intro p {
      align-items: center;
     text-align: center;
    }
-  .footer-inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
-  }
-  .footer-links {
-    gap: 1.25rem;
-  }
+  
   }
 }
