@@ -339,9 +339,27 @@ p, .hero-lead, .about-intro p {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  
-  .hero-visual { order: 1; }
+  .hero-visual {
+    order: 1; /* ensures card is below text */
+    margin-top: 1.5rem; /* light separation from hero-copy */
+  }
+  .hero-copy {
+    padding-top: 1rem;
+  }
+  /* fine-tune for smallest phones */
+  @media (max-width: 480px) {
+    .hero-visual {
+      margin-top: 2rem;
+    }
+    .hero-copy {
+      text-align: left; /* or center, depending on your brand style */
+    }
+    .hero-actions {
+      margin-top: 1rem;
+    }
+  }
 }
+
 /* ========================================
    CARD (Hero)
 ======================================== */
