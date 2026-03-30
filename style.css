@@ -642,7 +642,6 @@ p, .hero-lead, .about-intro p {
   border-top: 1px solid var(--border);
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.02) inset;
   padding: 2.5rem 0;
-  margin-top: 4rem; /* optional breathing space from content */
 }
 .footer-inner {
   width: min(var(--container), 100% - 2.5rem);
